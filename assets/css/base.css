@@ -5,7 +5,10 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+/* El recorte horizontal va en html: Safari de iPhone ignora el de body y
+   deja que la página se desplace de lado si algo sobresale. */
 html {
+  overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 16px);
@@ -21,7 +24,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img, svg { display: block; max-width: 100%; }

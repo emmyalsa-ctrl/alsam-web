@@ -275,6 +275,7 @@
 
 .field input[type="text"],
 .field input[type="email"],
+.field input[type="tel"],
 .field select,
 .field textarea {
   width: 100%;

@@ -1,0 +1,132 @@
+/* ==========================================================================
+   ALSAM · Ajustes para celular y tablet
+   1) Ninguna columna puede ensancharse más que la pantalla (Safari en iPhone
+      calcula los textos un poco distinto y desplazaba la página de lado).
+   2) Proporciones pensadas para pantallas de 360–430 px.
+   Se carga al final para tener la última palabra.
+   ========================================================================== */
+
+/* --- 1 · Las columnas nunca empujan el ancho de la página ---------------- */
+.hero__grid > *, .about__grid > *, .trio > *, .services__intro > *,
+.method__intro > *, .division > *, .why__grid > *, .steps > *,
+.faq__grid > *, .contact__grid > *, .form__row > *, .statement__inner > *,
+.division__head > *, .next-steps li > *, .console__body li > * { min-width: 0; }
+
+.hero__title, .display, .division__name, .statement__text,
+.contact__title, .about__title { overflow-wrap: break-word; }
+
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 1180px) {
+  .statement__inner { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* --- 2 · Teléfono ------------------------------------------------------- */
+@media (max-width: 640px) {
+  :root {
+    --gutter: 1.25rem;                              /* 20 px a cada lado */
+    --section-y: 3.25rem;
+    --fs-hero: clamp(2rem, 9.4vw, 2.6rem);
+    --fs-display: clamp(2.05rem, 9.6vw, 2.6rem);
+    --fs-lead: 1.08rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+  }
+
+  /* Retícula de fondo: solo los bordes, sin la línea que cruzaba los textos */
+  .grid-lines span:nth-child(2) { display: none; }
+
+  /* Hero */
+  .hero__grid { gap: 2.5rem; padding-top: 1.75rem; }
+  .eyebrow { margin-bottom: 1.1rem; font-size: 0.72rem; gap: 0.6rem; }
+  .hero__title { line-height: 1.02; }
+  .hero__lead { margin-top: 1.25rem; font-size: 1rem; line-height: 1.6; color: var(--c-muted); max-width: 36ch; }
+  .hero__actions { margin-top: 1.75rem; gap: 1rem 1.5rem; }
+  .hero__actions .btn--accent { min-height: 54px; font-size: 1rem; }
+  .hero__actions .btn--link { font-size: 0.98rem; }
+  .hero__figure { max-width: 100%; }
+
+  /* Botones en general */
+  .btn { min-height: 50px; padding-inline: 1.25rem; font-size: 1rem; }
+  .btn--lg { min-height: 54px; padding-inline: 1.5rem; }
+  .btn--link { min-height: 0; padding-inline: 0; }
+
+  /* Cinta */
+  .ticker { padding-block: 0.85rem; }
+  .ticker__track { font-size: 1.2rem; gap: 1.75rem; }
+
+  /* Encabezados de sección */
+  .sec-head { margin-bottom: 1.5rem; padding-bottom: 1rem; font-size: 0.75rem; }
+  .marker { width: 28px; height: 28px; font-size: 0.65rem; }
+  .services__intro, .method__intro { gap: 1rem; margin-bottom: 1.75rem; }
+  .services__intro .lead, .method__intro .lead { font-size: 1rem; }
+
+  /* Nosotros */
+  .about__grid { gap: 1.75rem; }
+  .about__title { font-size: var(--fs-display); }
+  .about__statement { font-size: 1.08rem; line-height: 1.55; }
+  .chips a { padding: 0.45rem 0.7rem; font-size: 0.72rem; }
+  .trio { margin-top: 2rem; }
+  .trio__item { padding: 1.5rem 0 1.5rem; gap: 0.6rem; }
+
+  /* Divisiones */
+  .division { gap: 1.25rem; padding-block: 2rem; }
+  .division__name { font-size: clamp(2rem, 9vw, 2.4rem); }
+  .division__tag { margin-top: 0.8rem; }
+  .division__intro { gap: 1.25rem; }
+  .division__desc { font-size: 1.02rem; line-height: 1.55; }
+  .division__col { padding-top: 1rem; }
+  .division__col h4 { margin-bottom: 0.75rem; }
+  .division__vis { max-width: 100%; }
+
+  /* Banda azul */
+  .statement__inner { padding-block: 2.5rem; gap: 1.5rem; }
+  .statement__text { font-size: clamp(2rem, 9.4vw, 2.5rem); }
+  .statement__steps li { grid-template-columns: 2.5rem 1fr; padding: 0.75rem 0; }
+  .statement__steps strong { display: block; font-size: 1.05rem; }
+
+  /* Por qué ALSAM */
+  .why__item { padding: 1.1rem 1.1rem 1.25rem; gap: 0.5rem; }
+  .why__item::after { right: 1.1rem; top: 1.4rem; }
+  .why__item:first-child h3 { font-size: 1.6rem; }
+  .why__item .why__cta-text { font-size: 1.7rem; }
+  .why__item--cta { padding: 1.5rem 1.1rem; }
+
+  /* Método */
+  .step { padding: 0 0 1.75rem 1.4rem; grid-template-columns: 2.5rem 1fr; }
+  .step__title { font-size: 1.6rem; }
+
+  /* Preguntas */
+  .faq .sec-head { margin-bottom: 1.5rem; }
+  .faq__grid { gap: 1.75rem; }
+  .faq__title { margin-bottom: 1.25rem; }
+  .faq__card { margin-top: 1.25rem; padding: 1.25rem; }
+  .faq__card p { font-size: 1.5rem; }
+  .qa summary { padding: 1.1rem 0; font-size: 1.02rem; gap: 1rem; }
+  .qa summary::after { width: 28px; height: 28px; }
+  .qa p { padding-bottom: 1.25rem; font-size: 0.98rem; }
+
+  /* Contacto */
+  .contact__grid { gap: 2.25rem; }
+  .contact__aside { gap: 1.75rem; }
+  .contact__title { font-size: var(--fs-display); }
+  .form { padding: 1.25rem; gap: 1rem; }
+  .field input[type="text"], .field input[type="email"], .field input[type="tel"], .field select, .field textarea { min-height: 50px; font-size: 1rem; }
+  .field textarea { min-height: 130px; }
+
+  /* Pie */
+  .site-footer { padding-top: 2.5rem; }
+  .footer__word { font-size: 24vw; }
+  .footer__bar { padding-block: 1.5rem; }
+
+  /* Cabecera */
+  .brand__mark { width: 28px; height: 28px; }
+  .brand__word { font-size: 1.05rem; }
+}
+
+/* Teléfonos muy angostos (≤ 360 px) */
+@media (max-width: 360px) {
+  :root { --gutter: 1rem; }
+  .hero__title { font-size: 1.85rem; }
+}
