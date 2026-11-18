@@ -1,0 +1,59 @@
+/* ==========================================================================
+   ALSAM · Design tokens
+   Paleta, tipografía, espaciado y movimiento. Todo el sitio consume estas
+   variables: cambiar la marca = cambiar este archivo.
+   ========================================================================== */
+
+:root {
+  /* Color: azul marino profundo + blanco frío + un solo acento azul eléctrico */
+  --c-bg:        #0a1220;
+  --c-bg-2:      #0f1a2d;
+  --c-bg-3:      #15233a;
+  --c-paper:     #eef3fa;
+  --c-text:      #dbe4f0;
+  --c-muted:     #8d9db5;
+  --c-faint:     #5f7088;
+  --c-line:      rgba(238, 243, 250, 0.10);
+  --c-line-2:    rgba(238, 243, 250, 0.20);
+  --c-accent:    #3d93ff;   /* Señal ALSAM */
+  --c-accent-ink:#06101f;
+  --c-error:     #ff8f8f;
+  --c-ok:        #7ee0b0;
+  --c-good:      #3ddc84;   /* Estados correctos en las demos */
+  --c-warn:      #f5b544;   /* Avisos en las demos */
+
+  /* Superficies claras (sección Método): texto sobre fondo --c-paper */
+  --c-ink:       #0a1220;
+  --c-ink-2:     #415068;
+  --c-ink-3:     #5d6c82;
+  --c-ink-line:  rgba(10, 18, 32, 0.16);
+
+  /* Tipografía */
+  --f-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --f-body:    "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:    "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --fs-hero:    clamp(2.6rem, 5.2vw, 6rem);
+  --fs-display: clamp(2.6rem, 6vw, 6.25rem);
+  --fs-h3:      clamp(1.35rem, 1.6vw, 1.6rem);
+  --fs-lead:    clamp(1.15rem, 1.5vw, 1.55rem);
+  --fs-body:    1.0625rem;
+  --fs-small:   0.9375rem;
+  --fs-mono:    0.8125rem;
+
+  /* Espaciado y retícula */
+  --gutter:     clamp(1rem, 3vw, 3rem);
+  --maxw:       1720px;
+  --section-y:  clamp(3.5rem, 6.5vw, 5.75rem);
+  --header-h:   80px;
+
+  /* Movimiento */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast:     180ms;
+  --t-med:      420ms;
+  --t-slow:     900ms;
+}
+
+@media (max-width: 760px) {
+  :root { --header-h: 64px; }
+}

@@ -1,0 +1,354 @@
+/* ==========================================================================
+   ALSAM · Componentes reutilizables
+   Cabecera, marca, botones, marcadores, encabezados de sección, iconos,
+   marco de figura y campos de formulario.
+   ========================================================================== */
+
+/* --- Cabecera ------------------------------------------------------------- */
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  height: var(--header-h);
+  transition: background var(--t-med), border-color var(--t-med);
+  border-bottom: 1px solid transparent;
+}
+.site-header.is-scrolled {
+  background: rgba(10, 18, 32, 0.82);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom-color: var(--c-line);
+}
+.site-header__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.brand { display: inline-flex; align-items: center; gap: 0.7rem; color: var(--c-paper); }
+.brand__mark { width: 32px; height: 32px; }
+.brand__mark path { stroke: var(--c-bg); }
+.brand__mark rect + path + rect { fill: var(--c-accent); }
+.brand__word {
+  font-family: var(--f-display);
+  font-stretch: 125%;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+}
+
+.nav { display: flex; align-items: center; gap: clamp(1.5rem, 3vw, 3.5rem); }
+.nav__list { display: flex; gap: clamp(1.1rem, 2vw, 2.25rem); }
+.nav__link {
+  position: relative;
+  display: inline-block;
+  font-size: 0.975rem;
+  font-weight: 500;
+  color: var(--c-text);
+  padding-block: 0.4rem;
+  white-space: nowrap;
+  transition: color var(--t-fast);
+}
+.nav__link:hover, .nav__link[aria-current="true"] { color: var(--c-paper); }
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--c-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t-med) var(--ease-out);
+}
+.nav__link:hover::after,
+.nav__link[aria-current="true"]::after { transform: scaleX(1); }
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--f-mono);
+  font-size: var(--fs-mono);
+  color: var(--c-paper);
+  padding: 0.6rem 0;
+}
+.menu-toggle__icon { display: grid; gap: 6px; width: 22px; }
+.menu-toggle__icon span {
+  height: 1.5px;
+  background: currentColor;
+  transition: transform var(--t-med) var(--ease-out);
+}
+.menu-toggle[aria-expanded="true"] .menu-toggle__icon span:first-child { transform: translateY(3.75px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] .menu-toggle__icon span:last-child  { transform: translateY(-3.75px) rotate(-45deg); }
+
+@media (max-width: 1180px) {
+  .menu-toggle { display: inline-flex; }
+  .nav {
+    position: fixed;
+    inset: var(--header-h) 0 0 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem var(--gutter) 2.5rem;
+    background: var(--c-bg);
+    border-top: 1px solid var(--c-line);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity var(--t-med) var(--ease-out), transform var(--t-med) var(--ease-out), visibility 0s linear var(--t-med);
+  }
+  .nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition-delay: 0s;
+  }
+  .nav__list { flex-direction: column; gap: 0; }
+  .nav__link {
+    width: 100%;
+    font-family: var(--f-display);
+    font-stretch: 62%;
+    font-weight: 800;
+    font-size: clamp(2.1rem, 9vw, 3.2rem);
+    text-transform: uppercase;
+    line-height: 1;
+    padding-block: 0.8rem;
+    border-bottom: 1px solid var(--c-line);
+    color: var(--c-paper);
+  }
+  .nav__link[aria-current="true"] { color: var(--c-accent); }
+  .nav__link::after { display: none; }
+  .nav { overflow-y: auto; }
+  .nav__cta { justify-content: center; }
+  body.menu-open { overflow: hidden; }
+}
+
+/* --- Botones -------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 52px;
+  padding: 0 1.5rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1;
+  white-space: nowrap;
+  transition: background var(--t-fast), color var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
+}
+.btn--lg { min-height: 64px; padding-inline: 2rem; }
+
+.btn--solid { background: var(--c-paper); color: var(--c-bg); }
+.btn--solid:hover { background: var(--c-accent); color: var(--c-accent-ink); }
+.btn--solid:active { transform: translateY(1px); }
+.btn__box {
+  width: 11px; height: 11px;
+  border: 1.5px solid currentColor;
+  transition: background var(--t-fast);
+}
+.btn--solid:hover .btn__box { background: currentColor; }
+
+/* Acción principal: naranja ALSAM */
+.btn--accent { background: var(--c-accent); color: var(--c-accent-ink); }
+.btn--accent:hover { background: var(--c-paper); color: var(--c-bg); }
+.btn--accent:active { transform: translateY(1px); }
+.btn--accent:hover .btn__box { background: currentColor; }
+
+.btn--outline { border: 1px solid var(--c-line-2); color: var(--c-paper); }
+.btn--outline:hover { border-color: var(--c-paper); }
+.btn__dot { width: 8px; height: 8px; background: var(--c-accent); }
+
+.btn--link {
+  min-height: 0;
+  padding: 0 0 0.6rem;
+  color: var(--c-paper);
+  border-bottom: 1px solid var(--c-paper);
+  border-radius: 0;
+}
+.btn--link::after {
+  content: "→";
+  font-family: var(--f-mono);
+  transition: transform var(--t-med) var(--ease-out);
+}
+.btn--link:hover { color: var(--c-accent); border-color: var(--c-accent); }
+.btn--link:hover::after { transform: translateX(4px); }
+
+.btn[disabled] { opacity: 0.55; cursor: progress; }
+
+/* --- Marcadores y encabezados de sección --------------------------------- */
+
+.marker {
+  display: inline-grid;
+  place-items: center;
+  width: 32px; height: 32px;
+  border: 1px solid var(--c-line-2);
+  border-radius: 50%;
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  color: var(--c-muted);
+  background: var(--c-bg);
+}
+
+.sec-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: clamp(1.75rem, 3.5vw, 3rem);
+  border-bottom: 1px solid var(--c-line);
+  font-family: var(--f-mono);
+  font-size: var(--fs-mono);
+}
+.sec-head__label { color: var(--c-paper); }
+.sec-head__count { margin-left: auto; color: var(--c-faint); }
+
+/* --- Iconos (trazo consistente 1.5, esquinas rectas) --------------------- */
+
+.icon {
+  width: 48px; height: 48px;
+  fill: none;
+  stroke: var(--c-paper);
+  stroke-width: 1.5;
+  stroke-linecap: square;
+}
+.icon .fill { fill: var(--c-accent); stroke: none; }
+
+/* --- Marco de figura (esquinas técnicas) --------------------------------- */
+
+.frame { position: relative; }
+.frame__corner {
+  position: absolute;
+  z-index: 2;
+  width: 22px; height: 22px;
+  border: 0 solid var(--c-paper);
+  pointer-events: none;
+}
+.frame__corner--tl { top: 16px; left: 16px; border-top-width: 1.5px; border-left-width: 1.5px; }
+.frame__corner--tr { top: 16px; right: 16px; border-top-width: 1.5px; border-right-width: 1.5px; }
+.frame__corner--bl { bottom: 16px; left: 16px; border-bottom-width: 1.5px; border-left-width: 1.5px; }
+.frame__corner--br { bottom: 16px; right: 16px; border-bottom-width: 1.5px; border-right-width: 1.5px; border-color: var(--c-accent); }
+
+.figcap {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  padding-top: 1rem;
+  font-family: var(--f-mono);
+  font-size: var(--fs-mono);
+  line-height: 1.7;
+  color: var(--c-muted);
+  max-width: 52ch;
+}
+.figcap__num { color: var(--c-paper); }
+
+/* --- Lista con casillas --------------------------------------------------- */
+
+.checklist { display: grid; gap: 0.6rem; }
+.checklist li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--c-text);
+}
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.6em;
+  width: 7px; height: 7px;
+  background: var(--c-accent);
+}
+
+/* --- Formularios ---------------------------------------------------------- */
+
+.field { display: grid; gap: 0.55rem; }
+.field label {
+  font-family: var(--f-mono);
+  font-size: var(--fs-mono);
+  color: var(--c-muted);
+}
+.field .req { color: var(--c-accent); }
+.field .opt { color: var(--c-faint); }
+
+.field input[type="text"],
+.field input[type="email"],
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 54px;
+  padding: 0.85rem 1rem;
+  background: var(--c-bg-2);
+  border: 1px solid var(--c-line-2);
+  border-radius: 0;
+  color: var(--c-paper);
+  font-size: 1.05rem;
+  transition: border-color var(--t-fast), background var(--t-fast);
+  -webkit-appearance: none;
+  appearance: none;
+}
+.field textarea { resize: vertical; min-height: 150px; line-height: 1.5; }
+.field ::placeholder { color: var(--c-faint); }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--c-muted); }
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none;
+  border-color: var(--c-paper);
+  background: var(--c-bg-3);
+}
+.field [aria-invalid="true"] { border-color: var(--c-error); }
+
+.select { position: relative; }
+.select::after {
+  content: "";
+  position: absolute;
+  right: 1.1rem; top: 50%;
+  width: 8px; height: 8px;
+  border-right: 1.5px solid var(--c-paper);
+  border-bottom: 1.5px solid var(--c-paper);
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+.select select { padding-right: 2.75rem; cursor: pointer; }
+.select option { background: var(--c-bg-2); color: var(--c-paper); }
+
+.field__error {
+  min-height: 1.2em;
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  color: var(--c-error);
+}
+.field__foot { display: flex; justify-content: space-between; gap: 1rem; }
+.field__count { font-family: var(--f-mono); font-size: 0.75rem; color: var(--c-faint); white-space: nowrap; }
+
+.field--check {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  column-gap: 0.85rem;
+}
+.field--check label { font-family: var(--f-body); font-size: var(--fs-small); color: var(--c-text); line-height: 1.5; cursor: pointer; }
+.field--check .field__error { grid-column: 1 / -1; }
+.field--check input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px; height: 20px;
+  margin: 0.1rem 0 0;
+  border: 1.5px solid var(--c-line-2);
+  background: var(--c-bg-2);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.field--check input::after {
+  content: "";
+  width: 10px; height: 10px;
+  background: var(--c-accent);
+  transform: scale(0);
+  transition: transform var(--t-fast) var(--ease-out);
+}
+.field--check input:checked { border-color: var(--c-paper); }
+.field--check input:checked::after { transform: scale(1); }
+
+/* Trampa anti-spam */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }

@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ALSAM · Páginas web, automatización e inteligencia artificial para empresas</title>
+  <meta name="description" content="ALSAM desarrolla páginas web, automatizaciones y soluciones de inteligencia artificial para empresas que buscan optimizar sus operaciones y fortalecer su presencia digital.">
+  <meta name="theme-color" content="#0a1220">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Seguridad: política de contenido. Si cambias de proveedor de formularios, actualiza connect-src. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io http://localhost:3000; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Open Graph (añade og:url y og:image cuando exista el dominio definitivo) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ALSAM · Soluciones tecnológicas para empresas">
+  <meta property="og:description" content="Socio tecnológico que acompaña a las empresas desde la identificación de sus problemas hasta la implementación y el mantenimiento de sus soluciones.">
+  <meta property="og:locale" content="es_MX">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/demos.css">
+
+  <script src="assets/js/boot.js"></script>
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/form.js" defer></script>
+  <script src="assets/js/demos.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Retícula de fondo: 4 columnas, como una lámina técnica -->
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- ============ CABECERA ============ -->
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="#inicio" aria-label="ALSAM, ir al inicio">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="1" y="1" width="30" height="30" rx="7" fill="currentColor"/>
+          <path d="M9 23 16 8l7 15" fill="none" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="13.5" y="17" width="5" height="3"/>
+        </svg>
+        <span class="brand__word">ALSAM</span>
+      </a>
+
+      <nav class="nav" id="menu" aria-label="Principal" data-nav>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#inicio">Inicio</a></li>
+          <li><a class="nav__link" href="#nosotros">Nosotros</a></li>
+          <li><a class="nav__link" href="#servicios">Servicios</a></li>
+          <li><a class="nav__link" href="#por-que">Por qué ALSAM</a></li>
+          <li><a class="nav__link" href="#metodo">Método</a></li>
+          <li><a class="nav__link" href="#preguntas">Preguntas frecuentes</a></li>
+        </ul>
+        <a class="btn btn--outline nav__cta" href="#contacto"><span class="btn__dot" aria-hidden="true"></span>Solicitar una consulta</a>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
+        <span class="menu-toggle__label">Menú</span>
+        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="progress" aria-hidden="true"><span data-progress></span></div>
+
+  <main id="contenido">
+
+    <!-- ============ A. HERO ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero__markers" aria-hidden="true">
+        <span class="marker">A</span><span class="marker">B</span><span class="marker">C</span><span class="marker">D</span>
+      </div>
+
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Soluciones tecnológicas para empresas</p>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="line"><span>Impulsamos negocios.</span></span>
+            <span class="line"><span>Diseñamos el futuro.</span></span>
+            <span class="line line--accent"><span>Con tecnología.</span></span>
+          </h1>
+
+          <p class="hero__lead">
+            Desarrollamos páginas web, automatizaciones y soluciones de inteligencia artificial para empresas que buscan optimizar sus operaciones, fortalecer su presencia digital y evolucionar mediante la tecnología.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--accent" href="#contacto"><span class="btn__box" aria-hidden="true"></span>Solicitar una consulta</a>
+            <a class="btn btn--link" href="#servicios">Conocer nuestras soluciones</a>
+          </div>
+        </div>
+
+        <figure class="hero__figure">
+          <div class="frame">
+            <span class="frame__corner frame__corner--tl" aria-hidden="true"></span>
+            <span class="frame__corner frame__corner--tr" aria-hidden="true"></span>
+            <span class="frame__corner frame__corner--bl" aria-hidden="true"></span>
+            <span class="frame__corner frame__corner--br" aria-hidden="true"></span>
+
+            <!-- Diagrama: el negocio al centro y las cuatro divisiones de ALSAM.
+                 Cada nodo es un enlace real a su división en la sección de servicios. -->
+            <svg class="schema" viewBox="0 0 640 720" role="group" aria-labelledby="schema-title schema-desc" data-schema>
+              <title id="schema-title">Sistema ALSAM</title>
+              <desc id="schema-desc">Tu negocio al centro, conectado con las cuatro divisiones de ALSAM: Digital, Automation, Intelligence y Care.</desc>
+              <defs>
+                <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <circle cx="1" cy="1" r="1" class="schema__dot"/>
+                </pattern>
+                <path id="flow-digital"      d="M260 335 H149 V202"/>
+                <path id="flow-automation"   d="M380 335 H491 V202"/>
+                <path id="flow-intelligence" d="M380 385 H491 V518"/>
+                <path id="flow-care"         d="M260 385 H149 V518"/>
+              </defs>
+
+              <rect width="640" height="720" class="schema__bg"/>
+              <rect width="640" height="720" fill="url(#dots)"/>
+
+              <!-- Regla y datos de lámina (decorativos) -->
+              <g class="schema__deco" aria-hidden="true">
+                <path class="schema__ruler" d="M24 44 H616 M24 38 V50 M172 41 V47 M320 38 V50 M468 41 V47 M616 38 V50"/>
+                <text x="24" y="72" class="schema__meta">ESQ. 01 / SISTEMA ALSAM</text>
+                <text x="616" y="72" class="schema__meta" text-anchor="end">4 DIVISIONES</text>
+                <text x="24" y="692" class="schema__meta">NÚCLEO: TU NEGOCIO</text>
+                <text x="616" y="692" class="schema__meta" text-anchor="end">REV. B</text>
+              </g>
+
+              <!-- Órbitas -->
+              <g class="schema__orbit" aria-hidden="true">
+                <circle cx="320" cy="360" r="150" class="schema__circle schema__circle--dash"/>
+              </g>
+              <circle cx="320" cy="360" r="112" class="schema__circle" aria-hidden="true"/>
+
+              <!-- Conexiones -->
+              <g class="schema__links" aria-hidden="true">
+                <use href="#flow-digital"/><use href="#flow-automation"/><use href="#flow-intelligence"/><use href="#flow-care"/>
+              </g>
+              <g class="schema__flows" aria-hidden="true">
+                <use href="#flow-digital"/><use href="#flow-automation"/><use href="#flow-intelligence"/><use href="#flow-care"/>
+              </g>
+              <g class="schema__packets" aria-hidden="true">
+                <rect x="-4" y="-4" width="8" height="8"><animateMotion dur="3.4s" repeatCount="indefinite"><mpath href="#flow-digital"/></animateMotion></rect>
+                <rect x="-4" y="-4" width="8" height="8"><animateMotion dur="3.4s" begin="0.85s" repeatCount="indefinite"><mpath href="#flow-automation"/></animateMotion></rect>
+                <rect x="-4" y="-4" width="8" height="8"><animateMotion dur="3.4s" begin="1.7s" repeatCount="indefinite"><mpath href="#flow-intelligence"/></animateMotion></rect>
+                <rect x="-4" y="-4" width="8" height="8"><animateMotion dur="3.4s" begin="2.55s" repeatCount="indefinite"><mpath href="#flow-care"/></animateMotion></rect>
+              </g>
+
+              <!-- Núcleo -->
+              <g class="schema__core">
+                <rect x="260" y="300" width="120" height="120" class="schema__core-box"/>
+                <path d="M293 386 320 330l27 56" class="schema__core-a"/>
+                <rect x="311" y="364" width="18" height="8" class="schema__core-bar"/>
+                <text x="320" y="446" text-anchor="middle" class="schema__label">TU NEGOCIO</text>
+              </g>
+
+              <!-- Divisiones (enlaces) -->
+              <a class="schema__node" href="#digital" aria-label="ALSAM Digital: páginas web y plataformas digitales">
+                <rect x="24" y="110" width="250" height="92"/>
+                <text x="42" y="136" class="schema__idx">01</text>
+                <text x="42" y="166" class="schema__name">ALSAM DIGITAL</text>
+                <text x="42" y="187" class="schema__sub">Web y plataformas digitales</text>
+                <path class="schema__arrow" d="M244 128 h12 v12 M256 128 l-12 12"/>
+              </a>
+              <a class="schema__node" href="#automation" aria-label="ALSAM Automation: automatización de procesos e integración de herramientas">
+                <rect x="366" y="110" width="250" height="92"/>
+                <text x="384" y="136" class="schema__idx">02</text>
+                <text x="384" y="166" class="schema__name">ALSAM AUTOMATION</text>
+                <text x="384" y="187" class="schema__sub">Procesos e integraciones</text>
+                <path class="schema__arrow" d="M586 128 h12 v12 M598 128 l-12 12"/>
+              </a>
+              <a class="schema__node" href="#intelligence" aria-label="ALSAM Intelligence: inteligencia artificial y soluciones inteligentes">
+                <rect x="366" y="518" width="250" height="92"/>
+                <text x="384" y="544" class="schema__idx">03</text>
+                <text x="384" y="574" class="schema__name">ALSAM INTELLIGENCE</text>
+                <text x="384" y="595" class="schema__sub">Inteligencia artificial</text>
+                <path class="schema__arrow" d="M586 536 h12 v12 M598 536 l-12 12"/>
+              </a>
+              <a class="schema__node" href="#care" aria-label="ALSAM Care: mantenimiento, soporte y continuidad tecnológica">
+                <rect x="24" y="518" width="250" height="92"/>
+                <text x="42" y="544" class="schema__idx">04</text>
+                <text x="42" y="574" class="schema__name">ALSAM CARE</text>
+                <text x="42" y="595" class="schema__sub">Soporte y continuidad</text>
+                <path class="schema__arrow" d="M244 536 h12 v12 M256 536 l-12 12"/>
+              </a>
+            </svg>
+          </div>
+          <figcaption class="figcap">
+            <span class="figcap__num">Fig. 01</span>
+            <span>Tu negocio al centro, conectado con nuestras cuatro divisiones. Selecciona una para conocerla.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="side-note" aria-hidden="true">Tecnología que trabaja para tu negocio.</p>
+    </section>
+
+    <!-- Cinta de divisiones -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>ALSAM Digital</span><i></i><span>ALSAM Automation</span><i></i><span>ALSAM Intelligence</span><i></i><span>ALSAM Care</span><i></i>
+        <span>ALSAM Digital</span><i></i><span>ALSAM Automation</span><i></i><span>ALSAM Intelligence</span><i></i><span>ALSAM Care</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ B. SOBRE ALSAM ============ -->
+    <section class="section about" id="nosotros" aria-labelledby="about-title">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <span class="marker">B</span>
+          <span class="sec-head__label">Sobre ALSAM</span>
+          <span class="sec-head__count">02 / 07</span>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__head">
+            <h2 class="display about__title" id="about-title" data-reveal>Tecnología con propósito, construida para tu negocio.</h2>
+            <nav class="chips" aria-label="Divisiones de ALSAM" data-reveal>
+              <a href="#digital">ALSAM Digital</a>
+              <a href="#automation">ALSAM Automation</a>
+              <a href="#intelligence">ALSAM Intelligence</a>
+              <a href="#care">ALSAM Care</a>
+            </nav>
+          </div>
+          <p class="about__statement" data-reveal>
+            ALSAM es un <em>socio tecnológico</em> que conecta tecnología, inteligencia y estrategia para ayudar a las empresas a evolucionar. Las acompañamos desde la identificación de sus problemas hasta la implementación y el mantenimiento de sus soluciones. Nacemos en Chihuahua, atendemos negocios de todo México y estamos construyendo una empresa con capacidad de crecer a nivel nacional.
+          </p>
+
+          <aside class="console" aria-label="Ilustración de las etapas de un proyecto" data-reveal>
+            <div class="console__bar" aria-hidden="true"><i></i><i></i><i></i><span>alsam / tu-proyecto</span></div>
+            <ul class="console__body">
+              <li><span>diagnóstico</span><span class="console__state console__state--done">completado</span></li>
+              <li><span>estrategia</span><span class="console__state console__state--done">completado</span></li>
+              <li><span>desarrollo</span><span class="console__state console__state--live">en curso</span></li>
+              <li><span>continuidad</span><span class="console__state">siempre disponible</span></li>
+            </ul>
+            <p class="console__note">Ilustración del proceso de trabajo.</p>
+          </aside>
+        </div>
+
+        <div class="trio">
+          <article class="trio__item" data-reveal>
+            <p class="mono-label">B.1</p>
+            <h3 class="trio__title">Qué hacemos</h3>
+            <p>Convertimos necesidades de negocio en soluciones digitales concretas: un sitio que presenta bien a tu empresa, procesos que dejan de depender de tareas manuales, herramientas que facilitan la atención a tus clientes.</p>
+          </article>
+          <article class="trio__item" data-reveal>
+            <p class="mono-label">B.2</p>
+            <h3 class="trio__title">Nuestra visión</h3>
+            <p>Que cualquier empresa, sin importar su tamaño, pueda apoyarse en tecnología bien hecha para trabajar mejor y evolucionar.</p>
+          </article>
+          <article class="trio__item" data-reveal>
+            <p class="mono-label">B.3</p>
+            <h3 class="trio__title">Cómo trabajamos</h3>
+            <p>Primero entendemos tu operación. Después proponemos solo lo que aporta valor y lo desarrollamos con un método definido y comunicación clara en cada etapa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ C. SERVICIOS ============ -->
+    <section class="section services" id="servicios" aria-labelledby="services-title">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <span class="marker">C</span>
+          <span class="sec-head__label">Servicios</span>
+          <span class="sec-head__count">03 / 07</span>
+        </header>
+
+        <div class="services__intro">
+          <h2 class="display" id="services-title" data-reveal>Cuatro divisiones.<br>Un solo sistema.</h2>
+          <p class="lead" data-reveal>Cada división resuelve un tipo de necesidad. Puedes trabajar con una sola o combinarlas para que tu empresa funcione como un sistema conectado.</p>
+        </div>
+
+        <div class="division-list">
+
+          <!-- 01 · DIGITAL -->
+          <article class="division" id="digital" aria-labelledby="div-digital" data-reveal>
+            <header class="division__head">
+              <span class="division__num">01</span>
+              <div>
+                <h3 class="division__name" id="div-digital"><span>ALSAM</span> Digital</h3>
+                <p class="division__tag">Presencia digital</p>
+              </div>
+            </header>
+            <div class="division__intro">
+              <p class="division__desc">Diseñamos y desarrollamos páginas web profesionales que permiten a las empresas presentar sus servicios, fortalecer su presencia digital y facilitar el contacto con nuevos clientes.</p>
+              <a class="btn btn--link" href="#contacto" data-service="digital">Consultar sobre ALSAM Digital</a>
+            </div>
+            <figure class="division__vis">
+              <div class="demo demo--web" data-demo="web">
+                <div class="demo__chrome">
+                  <span class="demo__lights" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="browser__nav" aria-hidden="true">
+                    <svg viewBox="0 0 16 16"><path d="M10 3 5 8l5 5"/></svg>
+                    <svg viewBox="0 0 16 16"><path d="m6 3 5 5-5 5"/></svg>
+                    <svg viewBox="0 0 16 16"><path d="M13 8a5 5 0 1 1-1.6-3.7M13 2.5v3h-3"/></svg>
+                  </span>
+                  <span class="browser__url">
+                    <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>
+                    <span>tuempresa.com<span class="browser__path" data-path></span></span>
+                  </span>
+                  <span class="demo__seg" role="group" aria-label="Tamaño de pantalla">
+                    <button type="button" class="is-on" aria-pressed="true" data-view="desk" title="Computadora"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1"/><path d="M5.5 14h5M8 11v3"/></svg><span class="sr-only">Vista de computadora</span></button>
+                    <button type="button" aria-pressed="false" data-view="mob" title="Celular"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4.5" y="1.5" width="7" height="13" rx="1.5"/><path d="M7 12.5h2"/></svg><span class="sr-only">Vista de celular</span></button>
+                  </span>
+                </div>
+                <div class="browser__stage">
+                  <div class="site" data-site>
+                    <span class="site__load" data-load aria-hidden="true"></span>
+                    <div class="site__nav">
+                      <span class="site__brand"><i aria-hidden="true"></i>Tu Empresa</span>
+                      <div class="site__links" data-links role="group" aria-label="Menú del sitio de ejemplo">
+                        <button type="button" class="is-on" aria-pressed="true" data-page="inicio">Inicio</button>
+                        <button type="button" aria-pressed="false" data-page="servicios">Servicios</button>
+                        <button type="button" aria-pressed="false" data-page="contacto">Contacto</button>
+                      </div>
+                      <button type="button" class="site__cta" data-go="contacto">Cotizar</button>
+                      <button type="button" class="site__burger" data-burger aria-expanded="false"><span aria-hidden="true"></span><span aria-hidden="true"></span><span class="sr-only">Menú del sitio de ejemplo</span></button>
+                    </div>
+                    <div class="site__body" data-body>
+                      <div class="site__page" data-panel="inicio">
+                        <div class="site__hero">
+                          <div class="site__copy">
+                            <span class="site__eyebrow">Bienvenido</span>
+                            <p class="site__h">Soluciones que hacen crecer tu negocio</p>
+                            <p class="site__p">Conoce lo que ofrecemos y contáctanos en un clic.</p>
+                            <div class="site__actions">
+                              <button type="button" class="site__btn" data-go="contacto">Contactar</button>
+                              <button type="button" class="site__btn site__btn--ghost" data-go="servicios">Ver servicios</button>
+                            </div>
+                          </div>
+                          <div class="site__img" aria-hidden="true"><i></i><i></i><i></i></div>
+                        </div>
+                        <ul class="site__feats">
+                          <li>Atención personalizada</li>
+                          <li>Respuesta rápida</li>
+                          <li>Fácil de contactar</li>
+                        </ul>
+                      </div>
+                      <div class="site__page" data-panel="servicios" hidden>
+                        <p class="site__title">Nuestros servicios</p>
+                        <div class="site__cards">
+                          <div class="site__card"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><b>Servicio uno</b><span>Breve descripción del servicio.</span><em>Ver más →</em></div>
+                          <div class="site__card"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><b>Servicio dos</b><span>Breve descripción del servicio.</span><em>Ver más →</em></div>
+                          <div class="site__card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><b>Servicio tres</b><span>Breve descripción del servicio.</span><em>Ver más →</em></div>
+                        </div>
+                      </div>
+                      <div class="site__page" data-panel="contacto" hidden>
+                        <p class="site__title">Escríbenos</p>
+                        <div class="site__form" data-form-box>
+                          <label class="site__field"><span>Nombre</span><input type="text" data-name placeholder="Tu nombre" autocomplete="off" maxlength="40"></label>
+                          <label class="site__field"><span>Correo</span><input type="text" data-mail placeholder="tu@correo.com" autocomplete="off" maxlength="60"></label>
+                          <button type="button" class="site__btn" data-send>Enviar mensaje</button>
+                        </div>
+                        <div class="site__ok" data-ok hidden>
+                          <span class="site__okicon" aria-hidden="true"></span>
+                          <b data-ok-title>¡Gracias!</b>
+                          <span>Recibimos tu mensaje. Te responderemos pronto.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>Pruébalo: navega el sitio, envía el formulario y cambia a vista de celular.</figcaption>
+            </figure>
+            <div class="division__col">
+              <h4>Problemas que resuelve</h4>
+              <ul class="plain-list">
+                <li>Tu empresa no tiene presencia en internet.</li>
+                <li>Tu sitio actual no refleja la calidad de tu trabajo.</li>
+                <li>Tus clientes no encuentran una forma sencilla de contactarte.</li>
+              </ul>
+            </div>
+            <div class="division__col">
+              <h4>Servicios incluidos</h4>
+              <ul class="checklist">
+                <li>Sitios web corporativos</li>
+                <li>Landing pages</li>
+                <li>Tiendas en línea</li>
+                <li>Plataformas digitales</li>
+                <li>Desarrollo web personalizado</li>
+              </ul>
+            </div>
+            <div class="division__col division__col--benefit">
+              <h4>Beneficios</h4>
+              <ul class="plain-list">
+                <li>Una imagen profesional y coherente.</li>
+                <li>Información clara para quien busca tus servicios.</li>
+                <li>Un canal de contacto siempre disponible.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 02 · AUTOMATION -->
+          <article class="division" id="automation" aria-labelledby="div-automation" data-reveal>
+            <header class="division__head">
+              <span class="division__num">02</span>
+              <div>
+                <h3 class="division__name" id="div-automation"><span>ALSAM</span> Automation</h3>
+                <p class="division__tag">Procesos conectados</p>
+              </div>
+            </header>
+            <div class="division__intro">
+              <p class="division__desc">Conectamos herramientas y automatizamos tareas repetitivas para ayudar a las empresas a optimizar sus procesos y dedicar más tiempo a las actividades importantes.</p>
+              <a class="btn btn--link" href="#contacto" data-service="automation">Consultar sobre ALSAM Automation</a>
+            </div>
+            <figure class="division__vis">
+              <div class="demo demo--flow" data-demo="flow">
+                <div class="demo__chrome">
+                  <span class="demo__lights" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="demo__name">Flujo · Nuevas solicitudes</span>
+                  <button type="button" class="switch" data-auto aria-pressed="false"><span class="switch__track" aria-hidden="true"><span></span></span>Automático</button>
+                </div>
+                <div class="flow">
+                  <span class="flow__k flow__k--l">Cuando llega…</span>
+                  <span class="flow__k flow__k--r">El sistema hace…</span>
+                  <button type="button" class="flow__in flow__r1" data-src="Formulario">
+                    <span class="flow__ico flow__ico--form" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span>
+                    <span class="flow__txt"><b>Formulario</b><small>Sitio web</small></span>
+                  </button>
+                  <button type="button" class="flow__in flow__r2" data-src="Correo">
+                    <span class="flow__ico flow__ico--mail" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>
+                    <span class="flow__txt"><b>Correo</b><small>Bandeja de entrada</small></span>
+                  </button>
+                  <button type="button" class="flow__in flow__r3" data-src="WhatsApp">
+                    <span class="flow__ico flow__ico--chat" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20l1.4-4A8 8 0 1 1 8.5 19z"/><path d="M9 10h6M9 13.5h4"/></svg></span>
+                    <span class="flow__txt"><b>WhatsApp</b><small>Mensaje nuevo</small></span>
+                  </button>
+                  <span class="flow__w flow__w--l flow__r1" aria-hidden="true"></span>
+                  <span class="flow__w flow__w--l flow__r2" aria-hidden="true"></span>
+                  <span class="flow__w flow__w--l flow__r3" aria-hidden="true"></span>
+                  <span class="flow__hub" aria-hidden="true">
+                    <svg class="flow__gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg>
+                    <b>ALSAM</b><small>Auto</small>
+                  </span>
+                  <span class="flow__w flow__w--r flow__r1" aria-hidden="true"></span>
+                  <span class="flow__w flow__w--r flow__r2" aria-hidden="true"></span>
+                  <span class="flow__w flow__w--r flow__r3" aria-hidden="true"></span>
+                  <span class="flow__out flow__r1" data-out>
+                    <span class="flow__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M9 9v11"/></svg></span>
+                    <span class="flow__txt"><b>Guardar cliente</b><small>Hoja de clientes</small></span>
+                    <i class="flow__tick" aria-hidden="true"></i>
+                  </span>
+                  <span class="flow__out flow__r2" data-out>
+                    <span class="flow__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20.5h4"/></svg></span>
+                    <span class="flow__txt"><b>Avisar al equipo</b><small>Notificación</small></span>
+                    <i class="flow__tick" aria-hidden="true"></i>
+                  </span>
+                  <span class="flow__out flow__r3" data-out>
+                    <span class="flow__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg></span>
+                    <span class="flow__txt"><b>Actualizar reporte</b><small>Resumen semanal</small></span>
+                    <i class="flow__tick" aria-hidden="true"></i>
+                  </span>
+                </div>
+                <div class="feed">
+                  <div class="feed__head">
+                    <span>Actividad</span>
+                    <span class="feed__stats"><b data-count>0</b> procesadas · <b>0</b> capturas manuales</span>
+                  </div>
+                  <ol class="feed__list" data-feed aria-live="polite">
+                    <li class="feed__empty">Toca un canal para enviar una solicitud de prueba.</li>
+                  </ol>
+                </div>
+              </div>
+              <figcaption>Pruébalo: toca un canal o activa el modo automático y mira la actividad.</figcaption>
+            </figure>
+            <div class="division__col">
+              <h4>Problemas que resuelve</h4>
+              <ul class="plain-list">
+                <li>Tareas manuales que consumen horas de tu equipo.</li>
+                <li>Información repartida en herramientas que no se comunican.</li>
+                <li>Seguimiento a clientes que depende de la memoria de alguien.</li>
+              </ul>
+            </div>
+            <div class="division__col">
+              <h4>Servicios incluidos</h4>
+              <ul class="checklist">
+                <li>Automatización de procesos</li>
+                <li>Integración de herramientas</li>
+                <li>Automatización comercial</li>
+                <li>Optimización de flujos de trabajo</li>
+              </ul>
+            </div>
+            <div class="division__col division__col--benefit">
+              <h4>Beneficios</h4>
+              <ul class="plain-list">
+                <li>Menos trabajo repetitivo.</li>
+                <li>Procesos más ordenados y con menos errores.</li>
+                <li>Más tiempo para lo que requiere criterio.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 03 · INTELLIGENCE -->
+          <article class="division" id="intelligence" aria-labelledby="div-intelligence" data-reveal>
+            <header class="division__head">
+              <span class="division__num">03</span>
+              <div>
+                <h3 class="division__name" id="div-intelligence"><span>ALSAM</span> Intelligence</h3>
+                <p class="division__tag">Soluciones inteligentes</p>
+              </div>
+            </header>
+            <div class="division__intro">
+              <p class="division__desc">Incorporamos soluciones de inteligencia artificial que pueden facilitar la atención, la organización y la gestión de información dentro de las empresas.</p>
+              <a class="btn btn--link" href="#contacto" data-service="intelligence">Consultar sobre ALSAM Intelligence</a>
+            </div>
+            <figure class="division__vis">
+              <div class="demo demo--chat" data-demo="chat">
+                <div class="chat__top">
+                  <span class="chat__avatar" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 8V5M9.5 13h.01M14.5 13h.01M10 16h4"/><circle cx="12" cy="4" r="1"/></svg></span>
+                  <span class="chat__who"><b>Asistente virtual</b><small data-status><i aria-hidden="true"></i>En línea</small></span>
+                  <button type="button" class="chat__reset" data-reset title="Reiniciar conversación"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.6-3.7M3 2.5v3h3"/></svg><span class="sr-only">Reiniciar conversación</span></button>
+                </div>
+                <div class="chat__log" data-log aria-live="polite">
+                  <p class="chat__day">Hoy</p>
+                </div>
+                <div class="chat__chips" data-chips>
+                  <button type="button" data-q="cotizacion">💬 Cotización</button>
+                  <button type="button" data-q="servicios">📋 Servicios</button>
+                  <button type="button" data-q="horario">🕒 Horario</button>
+                  <button type="button" data-q="asesor">👤 Hablar con asesor</button>
+                </div>
+                <form class="chat__bar" data-chat-form novalidate>
+                  <label class="sr-only" for="chat-demo-input">Escribe un mensaje para el asistente de demostración</label>
+                  <input id="chat-demo-input" type="text" data-input maxlength="120" placeholder="Escribe un mensaje…" autocomplete="off">
+                  <button type="submit" class="chat__send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 20 4l-6 16-2.5-6.5z"/></svg><span class="sr-only">Enviar</span></button>
+                </form>
+              </div>
+              <figcaption>Pruébalo: elige una opción o escribe tu propia pregunta.</figcaption>
+            </figure>
+            <div class="division__col">
+              <h4>Problemas que resuelve</h4>
+              <ul class="plain-list">
+                <li>Preguntas frecuentes que saturan a tu equipo.</li>
+                <li>Clientes que escriben fuera de horario.</li>
+                <li>Información difícil de consultar y aprovechar.</li>
+              </ul>
+            </div>
+            <div class="division__col">
+              <h4>Servicios incluidos</h4>
+              <ul class="checklist">
+                <li>Asistentes virtuales</li>
+                <li>Chatbots</li>
+                <li>Integraciones de inteligencia artificial</li>
+                <li>Soluciones de IA personalizadas</li>
+              </ul>
+            </div>
+            <div class="division__col division__col--benefit">
+              <h4>Beneficios</h4>
+              <ul class="plain-list">
+                <li>Atención disponible a cualquier hora.</li>
+                <li>Respuestas consistentes para tus clientes.</li>
+                <li>Información más fácil de consultar.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 04 · CARE -->
+          <article class="division" id="care" aria-labelledby="div-care" data-reveal>
+            <header class="division__head">
+              <span class="division__num">04</span>
+              <div>
+                <h3 class="division__name" id="div-care"><span>ALSAM</span> Care</h3>
+                <p class="division__tag">Continuidad tecnológica</p>
+              </div>
+            </header>
+            <div class="division__intro">
+              <p class="division__desc">Damos mantenimiento, soporte y seguimiento a tus soluciones digitales para que sigan funcionando, se mantengan actualizadas y evolucionen junto con tu negocio.</p>
+              <a class="btn btn--link" href="#contacto" data-service="care">Consultar sobre ALSAM Care</a>
+            </div>
+            <figure class="division__vis">
+              <div class="demo demo--care is-warn" data-demo="care">
+                <div class="demo__chrome">
+                  <span class="demo__lights" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="demo__name">Mantenimiento · tuempresa.com</span>
+                  <span class="care__live"><i aria-hidden="true"></i>En línea</span>
+                </div>
+                <div class="care">
+                  <div class="care__score">
+                    <div class="ring">
+                      <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring__bg" cx="60" cy="60" r="50"/><circle class="ring__fg" data-ring cx="60" cy="60" r="50" pathLength="100"/></svg>
+                      <span class="ring__val"><b data-score>72</b><small>%</small></span>
+                    </div>
+                    <span class="care__k">Salud del sitio</span>
+                    <p class="care__status" data-status aria-live="polite">4 puntos requieren atención</p>
+                  </div>
+                  <ul class="care__list">
+                    <li data-row data-warn="3 pendientes" data-ok="Al día">
+                      <span class="care__ico" aria-hidden="true"></span>
+                      <span class="care__name">Actualizaciones<small data-st>3 pendientes</small></span>
+                      <span class="care__bar" aria-hidden="true"><i></i></span>
+                    </li>
+                    <li data-row data-warn="Último hace 6 días" data-ok="Creado hoy">
+                      <span class="care__ico" aria-hidden="true"></span>
+                      <span class="care__name">Respaldo<small data-st>Último hace 6 días</small></span>
+                      <span class="care__bar" aria-hidden="true"><i></i></span>
+                    </li>
+                    <li data-row data-warn="Revisión pendiente" data-ok="Sin alertas">
+                      <span class="care__ico" aria-hidden="true"></span>
+                      <span class="care__name">Seguridad<small data-st>Revisión pendiente</small></span>
+                      <span class="care__bar" aria-hidden="true"><i></i></span>
+                    </li>
+                    <li data-row data-warn="Imágenes pesadas" data-ok="Optimizada">
+                      <span class="care__ico" aria-hidden="true"></span>
+                      <span class="care__name">Velocidad<small data-st>Imágenes pesadas</small></span>
+                      <span class="care__bar" aria-hidden="true"><i></i></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="care__term" data-term aria-hidden="true"><p><span>$</span> esperando revisión…</p></div>
+                <div class="demo__foot">
+                  <span class="demo__hint" data-msg>Última revisión: hace 6 días</span>
+                  <button type="button" class="demo__action" data-run>Ejecutar mantenimiento</button>
+                </div>
+              </div>
+              <figcaption>Pruébalo: ejecuta el mantenimiento y mira cómo cada punto vuelve a estar en orden.</figcaption>
+            </figure>
+            <div class="division__col">
+              <h4>Problemas que resuelve</h4>
+              <ul class="plain-list">
+                <li>Sitios lentos o desactualizados.</li>
+                <li>Errores que nadie atiende.</li>
+                <li>No tener a quién acudir cuando algo falla.</li>
+              </ul>
+            </div>
+            <div class="division__col">
+              <h4>Servicios incluidos</h4>
+              <ul class="checklist">
+                <li>Mantenimiento web</li>
+                <li>Actualizaciones</li>
+                <li>Soporte técnico</li>
+                <li>Optimización</li>
+                <li>Continuidad tecnológica</li>
+              </ul>
+            </div>
+            <div class="division__col division__col--benefit">
+              <h4>Beneficios</h4>
+              <ul class="plain-list">
+                <li>Tecnología al día y funcionando.</li>
+                <li>Un equipo técnico atento a tu plataforma.</li>
+                <li>Mejoras continuas según tus necesidades.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Banda de ruptura: el enfoque de ALSAM en una frase -->
+    <div class="statement">
+      <div class="container statement__inner">
+        <p class="statement__text" data-reveal>Primero entendemos tu negocio. Después construimos la tecnología.</p>
+        <ol class="statement__steps" data-reveal>
+          <li><span>01</span><div><strong>Entender</strong>Analizamos tu operación y tus objetivos.</div></li>
+          <li><span>02</span><div><strong>Diseñar</strong>Definimos la solución y su alcance.</div></li>
+          <li><span>03</span><div><strong>Construir</strong>Desarrollamos e implementamos.</div></li>
+          <li><span>04</span><div><strong>Acompañar</strong>Damos soporte y mejoras continuas.</div></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ============ D. POR QUÉ ALSAM ============ -->
+    <section class="section why" id="por-que" aria-labelledby="why-title">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <span class="marker">D</span>
+          <span class="sec-head__label">Por qué ALSAM</span>
+          <span class="sec-head__count">04 / 07</span>
+        </header>
+
+        <div class="services__intro">
+          <h2 class="display why__title" id="why-title" data-reveal>Lo que nos diferencia no es la tecnología. <span class="dim">Es cómo la aplicamos.</span></h2>
+          <p class="lead" data-reveal>No prometemos resultados garantizados. Trabajamos con claridad, método y acompañamiento para que siempre sepas qué esperar.</p>
+        </div>
+
+        <ul class="why__grid">
+          <li class="why__item" data-reveal>
+            <span class="mono-label">D.1</span>
+            <h3>Soluciones adaptadas a cada negocio</h3>
+            <p>Cada proyecto parte de tu operación y tus objetivos, no de una plantilla.</p>
+          </li>
+          <li class="why__item" data-reveal>
+            <span class="mono-label">D.2</span>
+            <h3>Enfoque en problemas reales</h3>
+            <p>Antes de proponer tecnología, entendemos qué necesitas resolver.</p>
+          </li>
+          <li class="why__item" data-reveal>
+            <span class="mono-label">D.3</span>
+            <h3>Integración de tecnologías</h3>
+            <p>Web, automatización e inteligencia artificial trabajando como un solo sistema.</p>
+          </li>
+          <li class="why__item" data-reveal>
+            <span class="mono-label">D.4</span>
+            <h3>Comunicación clara</h3>
+            <p>Te explicamos cada etapa en lenguaje sencillo y sabes en qué punto va tu proyecto.</p>
+          </li>
+          <li class="why__item" data-reveal>
+            <span class="mono-label">D.5</span>
+            <h3>Procesos estructurados</h3>
+            <p>Trabajamos con un método definido, con alcance y objetivos acordados desde el inicio.</p>
+          </li>
+          <li class="why__item" data-reveal>
+            <span class="mono-label">D.6</span>
+            <h3>Acompañamiento y soporte</h3>
+            <p>Seguimos disponibles después de la entrega para mantener y mejorar tu solución.</p>
+          </li>
+          <li class="why__item" data-reveal>
+            <span class="mono-label">D.7</span>
+            <h3>Visión a largo plazo</h3>
+            <p>Construimos soluciones pensadas para crecer junto con tu empresa.</p>
+          </li>
+          <li class="why__item why__item--cta" data-reveal>
+            <p class="why__cta-text">Cuéntanos qué necesita tu negocio.</p>
+            <a class="btn btn--accent" href="#contacto"><span class="btn__box" aria-hidden="true"></span>Solicitar una consulta</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ E. MÉTODO ============ -->
+    <section class="section method" id="metodo" aria-labelledby="method-title" data-method>
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <span class="marker">E</span>
+          <span class="sec-head__label">Método</span>
+          <span class="sec-head__count">05 / 07</span>
+        </header>
+
+        <div class="method__intro">
+          <h2 class="display" id="method-title" data-reveal>Cinco etapas.<br>Cero improvisación.</h2>
+          <p class="lead" data-reveal>Todos los proyectos siguen el mismo proceso. Así sabes qué esperar en cada momento.</p>
+        </div>
+
+        <div class="method__track" aria-hidden="true"><span class="method__progress" data-method-progress></span></div>
+
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step__num">01</span>
+            <h3 class="step__title">Diagnóstico</h3>
+            <p>Conocemos el negocio, identificamos sus necesidades y analizamos los problemas que busca resolver.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">02</span>
+            <h3 class="step__title">Estrategia</h3>
+            <p>Definimos la solución tecnológica más adecuada, establecemos objetivos y delimitamos el alcance del proyecto.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">03</span>
+            <h3 class="step__title">Desarrollo</h3>
+            <p>Diseñamos, desarrollamos e implementamos la solución acordada.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">04</span>
+            <h3 class="step__title">Implementación</h3>
+            <p>Realizamos pruebas, verificamos el funcionamiento y entregamos la solución al cliente.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">05</span>
+            <h3 class="step__title">Continuidad</h3>
+            <p>Ofrecemos mantenimiento, soporte y oportunidades de mejora según las necesidades del negocio.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ F. PREGUNTAS FRECUENTES ============ -->
+    <section class="section faq" id="preguntas" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <div class="faq__side">
+          <header class="sec-head" data-reveal>
+            <span class="marker">F</span>
+            <span class="sec-head__label">Preguntas frecuentes</span>
+            <span class="sec-head__count">06 / 07</span>
+          </header>
+          <h2 class="display faq__title" id="faq-title" data-reveal>Respuestas claras.</h2>
+          <p class="lead" data-reveal>¿Tu pregunta no está aquí? <a class="inline-link" href="#contacto">Escríbenos</a>.</p>
+          <aside class="faq__card" data-reveal>
+            <p>Cuéntanos qué necesita tu negocio.</p>
+            <a class="btn btn--accent" href="#contacto"><span class="btn__box" aria-hidden="true"></span>Solicitar una consulta</a>
+          </aside>
+        </div>
+
+        <div class="faq__list" data-reveal>
+          <details class="qa">
+            <summary>¿Qué es ALSAM?</summary>
+            <p>Una empresa de soluciones tecnológicas. Desarrollamos páginas web, automatizamos procesos e implementamos inteligencia artificial para negocios y empresas, y damos mantenimiento a esas soluciones.</p>
+          </details>
+          <details class="qa">
+            <summary>¿Qué tipo de empresas pueden contratar sus servicios?</summary>
+            <p>Trabajamos con negocios locales, emprendedores, comercios, empresas de servicios y pymes. Si tu empresa quiere mejorar su presencia digital o su forma de operar, podemos revisar tu caso.</p>
+          </details>
+          <details class="qa">
+            <summary>¿Cuánto cuesta desarrollar una página web?</summary>
+            <p>Depende del alcance: número de secciones, funciones e integraciones. Después de conocer tu necesidad te enviamos una propuesta con el costo y lo que incluye.</p>
+          </details>
+          <details class="qa">
+            <summary>¿Cuánto tiempo tarda un proyecto?</summary>
+            <p>Depende del alcance y de las características de cada proyecto. Después del diagnóstico te compartimos un calendario estimado con las etapas del trabajo.</p>
+          </details>
+          <details class="qa">
+            <summary>¿Cómo funciona el proceso de contratación?</summary>
+            <p>Nos escribes, conversamos sobre tu necesidad y te enviamos una propuesta con alcance y condiciones. Cuando la apruebas, comenzamos el proyecto.</p>
+          </details>
+          <details class="qa">
+            <summary>¿Puedo solicitar una solución personalizada?</summary>
+            <p>Sí. Todas nuestras soluciones se definen a partir de las necesidades de cada negocio.</p>
+          </details>
+          <details class="qa">
+            <summary>¿Ofrecen mantenimiento después de entregar un proyecto?</summary>
+            <p>Sí. A través de ALSAM Care ofrecemos mantenimiento, actualizaciones, soporte técnico y mejoras.</p>
+          </details>
+          <details class="qa">
+            <summary>¿Cómo puedo solicitar una consulta?</summary>
+            <p>Completa el <a class="inline-link" href="#contacto">formulario de contacto</a> de esta página. Revisamos tu solicitud y te contactamos para conversar sobre tu proyecto.</p>
+          </details>
+          <details class="qa">
+            <summary>¿Qué necesito para comenzar?</summary>
+            <p>Una idea general de lo que quieres lograr o del problema que quieres resolver. No necesitas conocimientos técnicos: nosotros te guiamos en el resto.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ G. CONTACTO ============ -->
+    <section class="section contact" id="contacto" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <span class="marker">G</span>
+          <span class="sec-head__label">Contacto</span>
+          <span class="sec-head__count">07 / 07</span>
+        </header>
+
+        <div class="contact__grid">
+          <div class="contact__aside">
+            <h2 class="display contact__title" id="contact-title" data-reveal>Comienza a desarrollar la siguiente etapa de tu empresa.</h2>
+
+            <ol class="next-steps" data-reveal>
+              <li><span>01</span>Revisamos tu solicitud.</li>
+              <li><span>02</span>Te contactamos para conocer tu proyecto.</li>
+              <li><span>03</span>Te enviamos una propuesta clara.</li>
+            </ol>
+
+            <!-- Se muestra solo si hay un número configurado en assets/js/config.js -->
+            <a class="btn btn--outline whatsapp" href="#" target="_blank" rel="noopener noreferrer" data-whatsapp hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg>
+              Escribir por WhatsApp
+            </a>
+          </div>
+
+          <form class="form" action="#" method="post" novalidate data-contact-form>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-nombre">Nombre <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-nombre" name="nombre" type="text" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="e-nombre">
+                <p class="field__error" id="e-nombre" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-empresa">Empresa <span class="opt">(opcional)</span></label>
+                <input id="f-empresa" name="empresa" type="text" autocomplete="organization" maxlength="120">
+              </div>
+              <div class="field">
+                <label for="f-telefono">Teléfono <span class="opt">(opcional)</span></label>
+                <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" maxlength="40">
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="f-email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="120" aria-describedby="e-email">
+                <p class="field__error" id="e-email" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-servicio">Servicio de interés <span class="req" aria-hidden="true">*</span></label>
+                <div class="select">
+                  <select id="f-servicio" name="servicio" required aria-describedby="e-servicio">
+                    <option value="">Selecciona una opción</option>
+                    <option value="digital">ALSAM Digital · Páginas web</option>
+                    <option value="automation">ALSAM Automation · Automatización</option>
+                    <option value="intelligence">ALSAM Intelligence · Inteligencia artificial</option>
+                    <option value="care">ALSAM Care · Mantenimiento y soporte</option>
+                    <option value="asesoria">Aún no lo sé, necesito asesoría</option>
+                  </select>
+                </div>
+                <p class="field__error" id="e-servicio" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-mensaje">Descripción breve de tu necesidad <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="f-mensaje" name="mensaje" rows="5" required minlength="20" maxlength="2000" aria-describedby="e-mensaje c-mensaje" placeholder="Cuéntanos qué necesitas y qué te gustaría lograr."></textarea>
+              <div class="field__foot">
+                <p class="field__error" id="e-mensaje" aria-live="polite"></p>
+                <span class="field__count" id="c-mensaje" data-counter>0 / 2000</span>
+              </div>
+            </div>
+
+            <!-- Trampa anti-spam: invisible para personas -->
+            <div class="hp" aria-hidden="true">
+              <label for="f-website">No llenes este campo</label>
+              <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="field field--check">
+              <input id="f-consent" name="consentimiento" type="checkbox" required aria-describedby="e-consent">
+              <label for="f-consent">Acepto que ALSAM use estos datos únicamente para responder a mi solicitud.</label>
+              <p class="field__error" id="e-consent" aria-live="polite"></p>
+            </div>
+
+            <div class="form__submit">
+              <button class="btn btn--accent btn--lg" type="submit" data-submit>
+                <span class="btn__box" aria-hidden="true"></span><span data-submit-label>Enviar solicitud</span>
+              </button>
+              <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer__word" aria-hidden="true">ALSAM</p>
+      <div class="footer__bar">
+        <p>© <span data-year>2026</span> ALSAM. Soluciones tecnológicas para empresas.</p>
+        <nav aria-label="Pie de página">
+          <ul class="footer__nav">
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#metodo">Método</a></li>
+            <li><a href="#preguntas">Preguntas frecuentes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <a class="footer__top" href="#inicio">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
